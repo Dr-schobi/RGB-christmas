@@ -13,7 +13,7 @@ This was a good inspiration, but I wanted to change a few things:
 
 ## Setup
 
-- >20 packs of LED strings of BTF Lighting fairy pixel LED strings, 50 LEDs per string
+- over 20 packs of LED strings of BTF Lighting fairy pixel LED strings, 50 LEDs per string
 - adjustable output DC-DC converters for point of load supply, converting from 24V distribution to 5V insertion at string connections
 - an 80W 24V Meanwell power supply (already available)
 - Phoenix Contact PTFIX 12x distribution blocks for easy wiring
