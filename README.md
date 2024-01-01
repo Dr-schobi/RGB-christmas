@@ -6,13 +6,17 @@ https://www.youtube.com/watch?v=TvlpIojusBE
 
 This was a good inspiration, but I wanted to change a few things:
 
-- different lights: the chunky RGB pixels and thick cables seemed outdated. The Chinese manufacturer BTF Lighting makes much nicer lights https://www.btf-lighting.com/collections/led-strip-set/products/usb-rgb-led-pixels-string-christmas-lights-2m-5m-10m-rf-21keys-controller-ws2812b-ic-addressable-individually-light-10-leds-m-5v available through Aliexpress. A first test showed that they could provide acceptable appearance on the living room tree
-- different software: the WLED project https://kno.wled.ge/ enables the quckest possible operation, while being easily extendable
-- I already had some ESP8266 modules available
+- different lights: the chunky RGB pixels and thick cables seemed outdated. The Chinese manufacturer BTF Lighting makes much nicer [RGB led lights](https://www.btf-lighting.com/collections/led-strip-set/products/usb-rgb-led-pixels-string-christmas-lights-2m-5m-10m-rf-21keys-controller-ws2812b-ic-addressable-individually-light-10-leds-m-5v) available through Aliexpress. A first test showed that they could provide acceptable appearance for the main living room tree.
+- different software: the [WLED project](https://kno.wled.ge/) enables the quickest possible operation, many effects, while being easily extendable. I already had some ESP8266 modules available
 
 
-## Setup
+## Construction and Setup
 
+The main challenge is the high current on the 5V rail. The LED strings need additional power injection every 50 or 100 LEDs.
+This is solved by a central 24V power supply and a lot of DC-DC converters that generate 5V somewhere on the tree.
+
+
+Components:
 - over 20 packs of LED strings of BTF Lighting fairy pixel LED strings, 50 LEDs per string
 - adjustable output DC-DC converters for point of load supply, converting from 24V distribution to 5V insertion at string connections
 - an 80W 24V Meanwell power supply (already available)
@@ -20,7 +24,7 @@ This was a good inspiration, but I wanted to change a few things:
 - 200mA fuses and wired fuse holders in each distribution wire
 - 2 pin and 3 pin male/female JST connectors with attached cables
 - about 75m of 2x0.35mm^2 wire for 24V power distribution, this was cheap aluminium wire. Testing showed little resistive heating at 24V 
-- heat shrink
+- black heat shrink to hide most of the DC-DC converters
 
 
 
@@ -34,3 +38,4 @@ Some things did not go as planned
 
 - in the lab setup one of the strings had the output connectors with a different pin ordering, shorting my power supplies and buring a few fuses
 - one of the point-of-load regulators broke
+
